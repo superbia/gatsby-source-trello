@@ -4,14 +4,14 @@ const crypto = require('crypto')
 let _verbose;
 let _apiKey;
 let _secret;
-let _teamId;
+let _memberId;
 
 exports.sourceNodes = async (
   { boundActionCreators },
   {
     apiKey,
     secret,
-    teamId,
+    memberId,
     verboseOutput = false
   }
 ) => {
@@ -19,10 +19,10 @@ exports.sourceNodes = async (
   _verbose = verboseOutput;
   _apiKey = apiKey;
   _secret = secret;
-  _teamId = teamId;
+  _memberId = memberId;
   try {
     const fetcher = new TrelloSource(_apiKey, _secret)
-    const raw = await fetcher.getTeam(_teamId)
+    const raw = await fetcher.getMember(_memberId)
     const data = JSON.parse(raw)
     const boardIDs = data.idBoards
 

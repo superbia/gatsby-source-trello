@@ -16,8 +16,8 @@ class TrelloSource {
   }
 
 
-  async getTeam(id) {
-    const url = `${this.TrelloBaseURL}/organizations/${id}?fields=all&key=${this._key}&token=${this._secret}`
+  async getMember(id) {
+    const url = `${this.TrelloBaseURL}/members/${id}?fields=all&key=${this._key}&token=${this._secret}`
     const data = await request.get(url)
     return data
   }

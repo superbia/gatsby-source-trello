@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/dt/gatsby-source-trello.svg?style=flat-square)](https://www.npmjs.com/package/gatsby-source-trello)
 [![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
-Source plugin for pulling data into Gatsby from Trello using `team`.
+Source plugin for pulling data into Gatsby from Trello using `member`.
 
 <p align="center">
 	<img src="https://raw.githubusercontent.com/Necmttn/gatsby-source-trello/master/logo.png">
@@ -22,7 +22,7 @@ plugins: [
   {
     resolve: 'gatsby-source-trello',
     options: {
-      teamId: `your_team_id/name`,
+      memberId: `your_member_id/name`,
       apiKey: `your_trello_access_token`,
       secret: `your_trello_secret`
     }
